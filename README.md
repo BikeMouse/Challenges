@@ -1,6 +1,7 @@
 # Challenges
 
 ## Daily coding challenges
+Platforms used: Codewars
 
 
 ### About
