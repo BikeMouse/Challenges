@@ -8,15 +8,22 @@ For example:
 gimme([2, 3, 1]) => 0
 */
 
-function gimme (triplet) {
-    // integers and floats, positive and negative
-    // return the index of that element, which value lies between
-    // [2,3,1] -> 0 -- 2 is between 1 and 3
-    let copy = [...triplet];
-    copy.sort((a,b) => a - b );
-    for (let i = 0; i < triplet.length; i++){
-      if (triplet[i]==copy[1]){
-        return i;
-      };
+function gimme(triplet) {
+  // integers and floats, positive and negative
+  // return the index of that element, which value lies between
+  // [2,3,1] -> 0 -- 2 is between 1 and 3
+  let copy = [...triplet];
+  copy.sort((a, b) => a - b);
+  for (let i = 0; i < triplet.length; i++) {
+    if (triplet[i] == copy[1]) {
+      return i;
     };
-  }
+  };
+}
+
+// or
+
+function gimme(triplet) {
+  let sort = [...triplet].sort((a, b) => a - b);
+  return triplet.findIndex((e) => e === sort[1]);
+}
